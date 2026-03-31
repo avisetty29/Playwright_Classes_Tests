@@ -11,11 +11,11 @@ test("Static Tables Demo", async({page})=>
     //print only specific row 
     const rows=static_table.locator("tr");
     //console.log(await rows.innerText())
-    
+
     // nth-of-type not working hence it is written not recommeded
-    for(let j=0;j<=24;j+=3)
+    for(let j=0;j<24;j+=3)
     {
       let column=rows.locator("td").nth(j);
-      console.log(await column.allInnerTexts());
+      console.log(await column.innerText());
     } 
 })
